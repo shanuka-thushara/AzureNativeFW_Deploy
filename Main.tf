@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_virtual_network" "example" {
-  name                = "AzureFirewallVNet"
+  name                = "AzureFirewall-VNet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
@@ -18,7 +18,7 @@ resource "azurerm_subnet" "example" {
 }
 
 resource "azurerm_public_ip" "example" {
-  name                = "AzureFirewallPublicIP"
+  name                = "AzureFirewall-PublicIP"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   allocation_method   = "Static"
@@ -26,7 +26,7 @@ resource "azurerm_public_ip" "example" {
 }
 
 resource "azurerm_firewall" "example" {
-  name                = "AzureFirewall"
+  name                = "Azure-FW"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   sku_name            = "AZFW_VNet"
