@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "example" {
-  name     = "AzureFirewallRG"
+  name     = "Test-RG"
   location = "West Europe"
 }
 
