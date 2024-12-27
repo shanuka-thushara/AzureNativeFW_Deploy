@@ -14,7 +14,7 @@ resource "azurerm_subnet" "example" {
   name                 = "AzureFirewallSubnet"
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
-  address_prefixes     = ["10.50.1.0/24"]
+  address_prefixes     = ["10.50.1.0/26"]
 }
 
 resource "azurerm_public_ip" "example" {
